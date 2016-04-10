@@ -1,0 +1,288 @@
+SQL> insert into route(route_id,flight_no,source,destination,arrival,departure,price) values(&route_id,&flight_no,&source,&destination,&arrival,&departure,&price);
+Enter value for route_id: 37
+Enter value for flight_no: 18824
+Enter value for source: 6510
+Enter value for destination: 9632
+Enter value for arrival: 0825
+Enter value for departure: 0525
+Enter value for price: 10000
+SQL> /
+Enter value for route_id: 38
+Enter value for flight_no: 18824
+Enter value for source: 9632
+Enter value for destination: 1212
+Enter value for arrival: 1400
+Enter value for departure: 0855
+Enter value for price: 21800
+SQL> /
+Enter value for route_id: 39
+Enter value for flight_no: 18824
+Enter value for source: 6510
+Enter value for destination: 1212
+Enter value for arrival: 1400
+Enter value for departure: 0525
+Enter value for price: 32000
+SQL> /
+Enter value for route_id: 40
+Enter value for flight_no: 27351
+Enter value for source: 8135
+Enter value for destination: 3784
+Enter value for arrival: 1925
+Enter value for departure: 1125
+Enter value for price: 60000
+SQL> /
+Enter value for route_id: 41
+Enter value for flight_no: 27351
+Enter value for source: 3784
+Enter value for destination: 2323
+Enter value for arrival: 0700
+Enter value for departure: 1955
+Enter value for price: 50000
+SQL> /
+Enter value for route_id: 42
+Enter value for flight_no: 27351
+Enter value for source: 8135
+Enter value for destination: 2323
+Enter value for arrival: 0700
+Enter value for departure: 1125
+Enter value for price: 110000
+SQL> /
+Enter value for route_id: 43
+Enter value for flight_no: 81239
+Enter value for source: 5443
+Enter value for destination: 1212
+Enter value for arrival: 1230
+Enter value for departure: 0030
+Enter value for price: 73000
+SQL> /
+Enter value for route_id: 44
+Enter value for flight_no: 81239
+Enter value for source: 1212
+Enter value for destination: 7713
+Enter value for arrival: 2200
+Enter value for departure: 1300
+Enter value for price: 40000
+SQL> /
+Enter value for route_id: 45
+Enter value for flight_no: 81239
+Enter value for source: 5443
+Enter value for destination: 7713
+Enter value for arrival: 2200
+Enter value for departure: 0030
+Enter value for price: 112000
+SQL> /
+Enter value for route_id: 46
+Enter value for flight_no: 16634
+Enter value for source: 5443
+Enter value for destination: 9632
+Enter value for arrival: 2340
+Enter value for departure: 1700
+Enter value for price: 38000
+SQL> /
+Enter value for route_id: 47
+Enter value for flight_no: 16634
+Enter value for source: 9632
+Enter value for destination: 1212
+Enter value for arrival: 0610
+Enter value for departure: 0010
+Enter value for price: 17000
+SQL> /
+Enter value for route_id: 48
+Enter value for flight_no: 16634
+Enter value for source: 1212
+Enter value for destination: 2323
+Enter value for arrival: 1740
+Enter value for departure: 0640
+Enter value for price: 35000
+SQL> /
+Enter value for route_id: 49
+Enter value for flight_no: 16634
+Enter value for source: 5443
+Enter value for destination: 1212
+Enter value for arrival: 0610
+Enter value for departure: 1700
+Enter value for price: 55000
+SQL> /
+Enter value for route_id: 50
+Enter value for flight_no: 16634
+Enter value for source: 9632
+Enter value for destination: 2323
+Enter value for arrival: 1740
+Enter value for departure: 0010
+Enter value for price: 52000
+SQL> /
+Enter value for route_id: 51
+Enter value for flight_no: 16634
+Enter value for source: 5443
+Enter value for destination: 2323
+Enter value for arrival: 1740
+Enter value for departure: 1700
+Enter value for price: 90000
+SQL> /
+Enter value for route_id: 52
+Enter value for flight_no: 91991
+Enter value for source: 6510
+Enter value for destination: 9632
+Enter value for arrival: 2100
+Enter value for departure: 1500
+Enter value for price: 23000
+SQL> /
+Enter value for route_id: 53
+Enter value for flight_no: 91991
+Enter value for source: 9632
+Enter value for destination: 3784
+Enter value for arrival: 0730
+Enter value for departure: 2130
+Enter value for price: 73800
+SQL> /
+Enter value for route_id: 54
+Enter value for flight_no: 91991
+Enter value for source: 6510
+Enter value for destination: 3784
+Enter value for arrival: 0730
+Enter value for departure: 1500
+Enter value for price: 96000
+SQL> /
+Enter value for route_id: 55
+Enter value for flight_no: 42424
+Enter value for source: 7713
+Enter value for destination: 5443
+Enter value for arrival: 0100
+Enter value for departure: 2000
+Enter value for price: 37000
+SQL> /
+Enter value for route_id: 56
+Enter value for flight_no: 42424
+Enter value for source: 5443
+Enter value for destination: 8135
+Enter value for arrival: 1330
+Enter value for departure: 0130
+Enter value for price: 80000
+SQL> /
+Enter value for route_id: 57
+Enter value for flight_no: 42424
+Enter value for source: 7713
+Enter value for destination: 8135
+Enter value for arrival: 1330
+Enter value for departure: 2000
+Enter value for price: 117000
+SQL> /
+Enter value for route_id: 58
+Enter value for flight_no: 31546
+Enter value for source: 1212
+Enter value for destination: 9632
+Enter value for arrival: 0330
+Enter value for departure: 2230
+Enter value for price: 30000
+SQL> /
+Enter value for route_id: 59
+Enter value for flight_no: 31546
+Enter value for source: 9632
+Enter value for destination: 6510
+Enter value for arrival: 0730
+Enter value for departure: 0400
+Enter value for price: 15800
+SQL> /
+Enter value for route_id: 60
+Enter value for flight_no: 31546
+Enter value for source: 6510
+Enter value for destination: 8135
+Enter value for arrival: 2200
+Enter value for departure: 0800
+Enter value for price: 85800
+SQL> /
+Enter value for route_id: 61
+Enter value for flight_no: 31546
+Enter value for source: 1212
+Enter value for destination: 6510
+Enter value for arrival: 0730
+Enter value for departure: 2230
+Enter value for price: 44000
+SQL> /
+Enter value for route_id: 62
+Enter value for flight_no: 31546
+Enter value for source: 9632
+Enter value for destination: 8135
+Enter value for arrival: 2200
+Enter value for departure: 0400
+Enter value for price: 100000
+SQL> /
+Enter value for route_id: 63
+Enter value for flight_no: 31546
+Enter value for source: 1212
+Enter value for destination: 8135
+Enter value for arrival: 2200
+Enter value for departure: 2230
+Enter value for price: 130000
+SQL> /
+Enter value for route_id: 64
+Enter value for flight_no: 21395
+Enter value for source: 5443
+Enter value for destination: 2323
+Enter value for arrival: 1115
+Enter value for departure: 0600
+Enter value for price: 23400
+SQL> /
+Enter value for route_id: 65
+Enter value for flight_no: 21395
+Enter value for source: 2323
+Enter value for destination: 7713
+Enter value for arrival: 1830
+Enter value for departure: 1145
+Enter value for price: 97400
+SQL> /
+Enter value for route_id: 66
+Enter value for flight_no: 21395
+Enter value for source: 5443
+Enter value for destination: 7713
+Enter value for arrival: 1830
+Enter value for departure: 0600
+Enter value for price: 120000
+SQL> /
+Enter value for route_id: 67
+Enter value for flight_no: 61521
+Enter value for source: 7713
+Enter value for destination: 1212
+Enter value for arrival: 1000
+Enter value for departure: 0300
+Enter value for price: 42200
+SQL> /
+Enter value for route_id: 68
+Enter value for flight_no: 61521
+Enter value for source: 1212
+Enter value for destination: 3784
+Enter value for arrival: 2230
+Enter value for departure: 1030
+Enter value for price: 35000
+SQL> /
+Enter value for route_id: 69
+Enter value for flight_no: 61521
+Enter value for source: 7713
+Enter value for destination: 3784
+Enter value for arrival: 2230
+Enter value for departure: 0300
+Enter value for price: 79000
+SQL> /
+Enter value for route_id: 70
+Enter value for flight_no: 18831
+Enter value for source: 2323
+Enter value for destination: 3784
+Enter value for arrival: 2250
+Enter value for departure: 1250
+Enter value for price: 41000
+SQL> /
+Enter value for route_id: 71
+Enter value for flight_no: 18831
+Enter value for source: 3784
+Enter value for destination: 6510
+Enter value for arrival: 2010
+Enter value for departure: 1320
+Enter value for price: 70000
+SQL> /
+Enter value for route_id: 72
+Enter value for flight_no: 18831
+Enter value for source: 2323
+Enter value for destination: 6510
+Enter value for arrival: 2010
+Enter value for departure: 1250
+Enter value for price: 111000

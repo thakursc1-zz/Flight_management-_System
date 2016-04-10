@@ -1,0 +1,143 @@
+For table_name='Airport'
+SQL> create table airport(port_id number(4),name varchar2(45),city varchar2(15),country varchar2(15))
+ 
+SQL> alter table airport add constraint airport_port_id_pk primary key(port_id);
+
+
+OUTPUT------------------------->
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| port_id | int(11)     | NO   | PRI | 0       |       |
+| name    | varchar(45) | YES  |     | NULL    |       |
+| city    | varchar(15) | YES  |     | NULL    |       |
+| country | varchar(15) | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+
+
+
+For table_name='Flight_details'
+SQL> create table flight_details(fno number(5),source number(4),destination number(4),airlines varchar2(15),no_of_stoppages number(1));
+
+SQL> alter table flight_details add constraint fd_fno_pk primary key(fno);
+
+SQL> alter table flight_details add constraint fd_source_fk foreign key(source) references airport(port_id);
+
+SQL> alter table flight_details add constraint fd_destination_fk foreign key(destination) references airport(port_id);
+
+SQL> alter table flight_details add constraint fd_s_d_ck check(source !=destination);
+
+OUTPUT------------------------->
++-----------------+-------------+------+-----+---------+-------+
+| Field           | Type        | Null | Key | Default | Extra |
++-----------------+-------------+------+-----+---------+-------+
+| fno             | int(11)     | NO   | PRI | 0       |       |
+| source          | int(11)     | YES  | MUL | NULL    |       |
+| destination     | int(11)     | YES  | MUL | NULL    |       |
+| airlines        | varchar(15) | YES  |     | NULL    |       |
+| no_of_stoppages | int(11)     | YES  |     | NULL    |       |
++-----------------+-------------+------+-----+---------+-------+
+5 rows in set (0.07 sec)
+
+
+
+For table_name='Passenger'
+SQL> create table passenger(pid number(5),first_name varchar2(10),last_name varchar2(10),age number(2),sex char(1),email_id varchar2(20),phone_no number(10));
+
+SQL> alter table passenger add constraint p_pid_pk primary key(pid);
+
+SQL> alter table passenger add constraint p_phno_u unique(phone_no);
+
+SQL> alter table passenger add constraint p_email_u unique(email_id);
+
+SQL> alter table passenger add constraint p_age_ck check(age>0);
+
+SQL> alter table passenger modify first_name varchar2(10) constraint p_fn_nn not null;
+
+SQL> alter table passenger modify last_name varchar2(10) constraint p_ln_nn not null;
+
+OUTPUT----------------------------->
++------------+-------------+------+-----+---------+-------+
+| pid        | int(11)     | NO   | PRI | NULL    |       |
+| first_name | varchar(10) | NO   |     | NULL    |       |
+| last_name  | varchar(10) | YES  |     | NULL    |       |
+| age        | int(11)     | YES  |     | NULL    |       |
+| sex        | char(1)     | YES  |     | NULL    |       |
+| email_id   | varchar(20) | YES  | UNI | NULL    |       |
+| phone_no   | int(11)     | YES  | UNI | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+
+
+For table_name='Dependents'
+SQL> create table dependents(dep_id number(5),first_name varchar2(10),last_name varchar2(10),age number(2));
+
+SQL> alter table dependents add constraint dep_id_fk foreign key(dep_id) references passenger(pid);
+
+SQL> alter table dependents modify first_name varchar2(10) constraint d_fn_nn not null;
+
+SQL> alter table dependents modify last_name varchar2(10) constraint d_ln_nn not null;
+
+SQL> alter table dependents add constraint d_age_ck check(age>0);
+
+OUTPUT-------------------------------------->
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| dep_id     | int(11)     | YES  | MUL | NULL    |       |
+| first_name | varchar(10) | NO   |     | NULL    |       |
+| last_name  | varchar(10) | NO   |     | NULL    |       |
+| age        | int(11)     | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+
+
+For table_name='Chooses'
+SQL> create table chooses(pnr number(8),pid number(5),fno number(5),doj date,meal char(1),insurance char(1));
+
+SQL> alter table chooses add constraint pnr_pk primary key(pnr);
+
+SQL> alter table chooses add constraint pid_fk foreign key(pid) references passenger(pid);
+
+SQL> alter table chooses add constraint fno_fk foreign key(fno) references flight_details(fno);
+
+SQL> alter table chooses add constraint meal_ck check(meal='Y'or meal='N');
+
+SQL> alter table chooses add constraint insurance_ck check(insurance='Y'or insurance='N');
+
+SQL> alter table chooses add no_of_seats number(1);
+
+OUTPUT----------------------------------->
++-------------+---------+------+-----+---------+-------+
+| Field       | Type    | Null | Key | Default | Extra |
++-------------+---------+------+-----+---------+-------+
+| pnr         | int(11) | NO   | PRI | 0       |       |
+| pid         | int(11) | YES  | MUL | NULL    |       |
+| fno         | int(11) | YES  | MUL | NULL    |       |
+| doj         | date    | YES  |     | NULL    |       |
+| meal        | char(1) | YES  |     | NULL    |       |
+| insurance   | char(1) | YES  |     | NULL    |       |
+| no_of_seats | int(11) | YES  |     | NULL    |       |
++-------------+---------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+
+
+For table_name='Route'
+SQL> create table route(flight_no number(5),station_id number(4),arrival number(4),departure number(4));
+
+SQL> alter table route add constraint r_fno_fk foreign key(flight_no) references flight_details(fno);
+
+SQL> alter table route add constraint r_port_fk foreign key(station_id) references airport(port_id);
+
+SQL> alter table route add constraint r_pk primary key(flight_no,station_id);
+
+For table_name='Payment'
+SQL> create table payment(pnr number(8),source number(4),destination number(4),price number(7));
+
+SQL> alter table payment add constraint p_pnr_fk foreign key(pnr) references chooses(pnr);
+

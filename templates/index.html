@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body >
+
+<div><head>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    
+</head></div>
+<p>Makemefly!</p>
+<div class="form1">
+    <form action="http://localhost:5000/flights" method="post">
+        <div id="origin">Select Origin
+            <input list="airports" name="airport_from">
+            <datalist id="airports">
+                <option value="Sydney">
+                <option value="New Delhi">
+                <option value="Johannesburg">
+                <option value="New York">
+                <option value="London">
+                <option value="Tokyo">
+                <option value="Bueonos Aires">
+                <option value="Paris">
+            </datalist>
+        </div>
+        <br>
+        <div id="destination">Select destination
+            <input list="airports" name="airport_to">
+            <datalist id="airports">
+                <option value="Sydney">
+                <option value="New Delhi">
+                <option value="Johannesburg">
+                <option value="New York">
+                <option value="London">
+                <option value="Tokyo">
+                <option value="Bueonos Aires">
+                <option value="Paris">
+            </datalist>
+        </div>
+        <br>
+        <div id="date"> Travel Date
+            <input id = "date1" type="date" name="date">
+        </div>
+        <div id="fly"><input type="submit" value="Fly"> </div>
+    </form>
+	<h1>{{errors}}</h1>
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form id="user" action="http://localhost:5000/payment" method="post">
+
+    <p>
+        Please fill the details of your co-passengers
+    </p>
+    <div class="abc">First name:<br>
+        <input type="text" name="firstname" class="in">
+    </div>
+
+    <div class="abc">
+        Last name:<br>
+        <input type="text" name="lastname" class="in">
+        <br>
+    </div>
+    <div class="abc">
+        Age:<br>
+        <input type="integer" name="age" class="in">
+    </div>
+    <br>
+    <div class="abc">
+        <input type="radio" name="sex" value="M" checked> Male
+        <br>
+    </div>
+    <div class="abc">
+        <input type="radio" name="sex" value="F"> Female
+        <br>
+    </div>
+
+    <div class="abc">
+        MEAL:
+        <br>
+        <input type="radio" name="meal" value="Y" checked> YES (5% of Price)
+        <input type="radio" name="meal" value="N"> NO
+        <br>
+    </div>
+    <br>
+    <div class="abc">
+        INSURANCE:
+        <br>
+        <input type="radio" name="insuarance" value="Y" checked> YES (5% of Price)
+        <input type="radio" name="insuarance" value="N"> NO
+        <br>
+    </div>
+
+    <input type="submit" value="DONE" id="done">
+</form>
+</body>
+
+<style>
+    body{
+        background:url('pics/flight-booking.jpg');
+        background-size: 1280px 820px;
+    }
+    p{
+        font-size: 20px;
+
+    }
+    .abc{
+        margin: 10px 0px 0px 50px;
+        font-size: 20px;
+        width: 200px;;
+    }
+    .in{
+        width:250px;
+    }
+    form {
+        width: 350px;
+        height: 550px;
+        padding: 10px;
+        margin-top: 10px;
+        margin-left: 780px;
+
+        background-color: rgba(112,200,227,0.2);
+        border-radius: 20px;
+    }
+
+    #done{
+        margin-top:5px;
+        margin-left:80px;
+        border-radius: 5px;
+        background-color: whitesmoke;
+        width:200px;
+        padding:10px;
+        -webkit-box-shadow: rgba(30, 144, 255,0.5) 0 0 2em;
+
+    }
+</style>
+</body>
+</html>

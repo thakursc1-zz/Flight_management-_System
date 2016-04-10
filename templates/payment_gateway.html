@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>{{warning}}</h1>
+    <h1 id="header">You have successfully booked your flight!</h1>
+	
+</head>
+<body>
+<div>
+<p> Your PNR is {{entries.pnr}}</p>
+
+<p> Flight price per seat: {{entries.flight_price}}</P>
+
+<p>You have opted for {{entries.seat}} seat/s.<p>
+
+<p> Opted for Meal :{{entries.meal}}</p>
+
+
+<p>Opted for Insuarance :{{entries.insuarance}}</p>
+
+
+<p> Your Payment is : {{entries.total_amount}}</p>
+
+
+<p> Today's Special Discount is {{entries.dis_percent}}%</p>
+
+
+<p> Final Amount Rs{{entries.discounted}} /-</p>
+    <br>
+<H1> Enjoy Your Flight!</h1>
+    </div>
+</body>
+
+<style>
+    #header{
+        background-color:rgba(255,255,255,0.1);
+        height: 50px;
+        width: 1200px;
+        padding: 5px;
+    }
+    body{
+        background:url('static/images/flight-booking.jpg');
+        background-size: 1920px 1080px;
+    }
+    div{
+        background-color:rgba(255,255,255,0.2);
+        width: 300px;
+        height:400px;
+        border-radius: 20px;
+        margin-left: 800px;
+        margin-right: 50px;;
+        padding: 40px;;
+    }
+
+</style>
+
+</html>

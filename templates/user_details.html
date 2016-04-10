@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<form id="user" action="http://localhost:5000/payment" method="post">
+
+    <div class="abc">First name:<br>
+        <input type="text" name="firstname" class="in">
+    </div>
+    <br>
+    <div class="abc">
+        Last name:<br>
+        <input type="text" name="lastname" class="in">
+        <br>
+    </div>
+    <div class="abc">
+        Age:<br>
+        <input type="integer" name="age" class="in">
+    </div>
+    <br>
+    <div class="abc">
+        <input type="radio" name="sex" value="M" checked> Male
+        <br>
+    </div>
+    <div class="abc">
+        <input type="radio" name="sex" value="F"> Female
+        <br>
+    </div>
+    <div class="abc">
+        Email:<br>
+        <input type="integer" name="email" class="in">
+        <br>
+    </div>
+    <div class="abc">
+        Phone:<br>
+        <input type="integer" name="phone" class="in">
+        <br>
+    </div>
+    <input type="hidden" name="rid" value="{{entries.rid}}">
+    <input type="hidden" name="date" value="{{entries.date}}">
+    <br>
+
+    <br>
+    <div class="abc">
+        MEAL:
+        <br>
+        <input type="radio" name="meal" value="Y" checked> YES (5% of Price)
+        <input type="radio" name="meal" value="N"> NO
+        <br>
+    </div>
+    <br>
+    <div class="abc">
+        INSURANCE:
+        <br>
+        <input type="radio" name="insuarance" value="Y" checked> YES (5% of Price)
+        <input type="radio" name="insuarance" value="N"> NO
+        <br>
+    </div>
+    <br>
+    <div class="abc">
+        No of Seats:<br>
+        <input type="integer" name="seats" class="in">
+    </div>
+    <input type="submit" value="BOOK NOW" id="booknow">
+	<h1>{{errors}}</h1>
+</form>
+</body>
+
+<style>
+    body{
+        background:url('static/images/flight-booking.jpg');
+
+        background-size: 1920px 1080px;
+    }
+    .abc{
+        margin: 10px 0px 0px 50px;
+        font-size: 20px;
+        width: 200px;;
+    }
+    .in{
+        width:250px;
+    }
+    form {
+        width: 350px;
+        height: 750px;
+        padding: 10px;
+        margin-top: 50px;
+        margin-left: 450px;
+        background-color: rgba(112,200,227,0.2);
+        border-radius: 20px;
+    }
+    #done{
+        margin-left: 100px;
+        padding:7px;
+    }
+    #booknow{
+        margin-top:10px;
+        margin-left:80px;
+        border-radius: 5px;
+        background-color: whitesmoke;
+        width:200px;
+        padding:10px;
+        -webkit-box-shadow: rgba(30, 144, 255,0.5) 0 0 2em;
+
+    }
+</style>
+</html>

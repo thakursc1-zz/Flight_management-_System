@@ -1,0 +1,165 @@
+For table_name='Airport'
+SQL> insert into airport values(&port_id,'&name','&city','&country');
+Enter value for port_id: 1212
+Enter value for name: Indira Gandhi International Airport
+Enter value for city: New Delhi
+Enter value for country: India
+SQL> /
+Enter value for port_id: 2323
+Enter value for name: Sydney Airport
+Enter value for city: Sydney
+Enter value for country: Austrailia
+SQL> /
+Enter value for port_id: 5443
+Enter value for name: John.F.Kennedy International Airport
+Enter value for city: New York
+Enter value for country: USA
+SQL> /
+Enter value for port_id: 9632
+Enter value for name: Charles de Gaulle Airport
+Enter value for city: Paris
+Enter value for country: France
+SQL> /
+Enter value for port_id: 7713
+Enter value for name: Haneda International Airport
+Enter value for city: Tokyo
+Enter value for country: Japan
+SQL> /
+Enter value for port_id: 3784
+Enter value for name: Or Tambo International Airport
+Enter value for city: Johannesburg
+Enter value for country: South Africa
+SQL> /
+Enter value for port_id: 6510
+Enter value for name: London City Airport
+Enter value for city: London
+Enter value for country: England
+SQL> /
+Enter value for port_id: 8135
+Enter value for name: Ministro Pistarini International Airport
+Enter value for city: Bueonos Aires
+Enter value for country: Argentina
+
+
+For table_name='Flight_details'
+
+SQL> insert into flight_details values(&fno,&source,&destination,'&airlines',&no_of_stoppages);
+Enter value for fno: 18242
+Enter value for source: 1212
+Enter value for destination: 6510
+Enter value for airlines: Air India
+Enter value for no_of_stoppages: 1
+SQL> /
+Enter value for fno: 27315
+Enter value for source: 2323
+Enter value for destination: 8135
+Enter value for airlines: Qantas
+Enter value for no_of_stoppages: 1
+SQL> /
+Enter value for fno: 81293
+Enter value for source: 7713
+Enter value for destination: 5443
+Enter value for airlines: J-Air
+Enter value for no_of_stoppages: 1
+SQL> /
+Enter value for fno: 16643
+Enter value for source: 2323
+Enter value for destination: 5443
+Enter value for airlines: Air-France
+Enter value for no_of_stoppages: 2
+SQL> /
+Enter value for fno: 91919
+Enter value for source: 3784
+Enter value for destination: 6510
+Enter value for airlines: Connair
+Enter value for no_of_stoppages: 1
+SQL> /
+Enter value for fno: 42442
+Enter value for source: 8135
+Enter value for destination: 7713
+Enter value for airlines: Hawk Air
+Enter value for no_of_stoppages: 1
+SQL> /
+Enter value for fno: 31564
+Enter value for source: 8135
+Enter value for destination: 1212
+Enter value for airlines: Thomas Cook
+Enter value for no_of_stoppages: 2
+SQL> /
+Enter value for fno: 21359
+Enter value for source: 7713
+Enter value for destination: 5443
+Enter value for airlines: American Jet
+Enter value for no_of_stoppages: 1
+SQL> /
+Enter value for fno: 61512
+Enter value for source: 3784
+Enter value for destination: 7713
+Enter value for airlines: Air India
+Enter value for no_of_stoppages: 1
+SQL> /
+Enter value for fno: 18813
+Enter value for source: 6510
+Enter value for destination: 2323
+Enter value for airlines: Thomas Cook
+Enter value for no_of_stoppages: 1
+SQL> /
+Enter value for fno: 18824
+Enter value for source: 6510
+Enter value for destination: 1212
+Enter value for airlines: Air India
+Enter value for no_of_stoppages: 1
+SQL> /
+Enter value for fno: 27351
+Enter value for source: 8135
+Enter value for destination: 2323
+Enter value for airlines: Qantas
+Enter value for no_of_stoppages: 1
+SQL> /
+Enter value for fno: 81239
+Enter value for source: 5443
+Enter value for destination: 7713
+Enter value for airlines: J-Air
+Enter value for no_of_stoppages: 1
+SQL> /
+Enter value for fno: 16634
+Enter value for source: 5443
+Enter value for destination: 7713
+Enter value for airlines: J-Air
+Enter value for no_of_stoppages: 1
+SQL> /
+Enter value for fno: 91991
+Enter value for source: 6510
+Enter value for destination: 3784
+Enter value for airlines: Connair
+Enter value for no_of_stoppages: 1
+SQL> /
+Enter value for fno: 42424
+Enter value for source: 7713
+Enter value for destination: 8135
+Enter value for airlines: Hawk Air
+Enter value for no_of_stoppages: 1
+SQL> /
+Enter value for fno: 31546
+Enter value for source: 1212
+Enter value for destination: 8135
+Enter value for airlines: Thomas Cook
+Enter value for no_of_stoppages: 2
+SQL> /
+Enter value for fno: 21395
+Enter value for source: 5443
+Enter value for destination: 7713
+Enter value for airlines: American Jet
+Enter value for no_of_stoppages: 1
+SQL> /
+Enter value for fno: 61521
+Enter value for source: 7713
+Enter value for destination: 3784
+Enter value for airlines: Air India
+Enter value for no_of_stoppages: 1
+SQL> /
+Enter value for fno: 18831
+Enter value for source: 2323
+Enter value for destination: 6510
+Enter value for airlines: Thomas Cook
+Enter value for no_of_stoppages: 1

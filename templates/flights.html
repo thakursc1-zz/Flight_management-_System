@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            background: url('static/images/flight-booking.jpg') no-repeat;
+            background-size: 1920px 1080px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline;
+        }
+
+        li {
+            display: inline;
+        }
+        #fly{
+            padding: 20px;
+            width: 300px;
+
+        }
+        table{
+            margin: 70px;;
+        }
+        tr{
+            text-align: center;
+            border-color: whitesmoke;
+            border-radius: 20px;;
+            margin:5px;
+            background:rgba(243,131,40,0.2);
+        }
+        td{
+            width:150px;
+        }
+        #none{
+            margin: 50px 380px;
+            font-size: 30px;
+            color:floralwhite;
+        }
+    </style>
+</head>
+<body>
+{% for entry in entries %}
+<table id="menu">
+    <tr>
+        <td><P>Flight NO:</p>{{ entry.Flight_no }}</td>
+        <td><P>Airlines:</p>{{ entry.Airlines }}</td>
+        <td><P>Departure time:</p>{{entry.depart_time}}</td>
+        <td><P>Arrival time:</p>{{entry.arrive_time}}</td>
+        <td><P>date:</p>{{entry.date}}</td>
+        <td><P>Price :</p>{{entry.price}}</td>
+        <td><P>No to stops:</p>{{entry.stops}}</td>
+        <td id="fly"><a href="http://localhost:5000/book?rid={{entry.rid}}&date={{entry.date}}">BOOK NOW</a></td>
+    </tr>
+</table>
+{% else %}
+<p id="none"><em>Unbelievable.  No entries here so far</p>
+{% endfor %}
+</body>
+</html>
